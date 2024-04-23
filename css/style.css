@@ -1,0 +1,126 @@
+:root {
+  --color-primary: #219f95;
+  --color-secondary: #afcedd;
+  --txt-primary: #1e1e1e;
+  --txt-secondary: #696969;
+  --txt-link: #234894;
+  --txt-white-color: #fff;
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.p-block {
+  padding: 1.5rem;
+}
+/* start ticket style */
+.tickets {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+}
+.ticket {
+  margin-block: 5rem;
+  max-width: 400px;
+  /* width: 400px; */
+  margin: 0 auto;
+  min-width: 350px;
+}
+.tickets-all > h1 {
+  font-size: 2.2rem;
+  margin-bottom: 5%;
+}
+.ticket__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.2rem;
+}
+.ticket__body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.ticket__title {
+  color: var(--txt-link);
+}
+.ticket__title > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ticket__date {
+  font-size: 1.2rem;
+}
+.ticket__title .ticket__number {
+  background-color: var(--color-secondary);
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  margin-left: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.ticket__content p {
+  color: var(--txt-secondary);
+  font-size: 1.2rem;
+}
+.ticket__content h2 {
+  margin-bottom: 0.5rem;
+}
+.ticket__user-avater {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+.ticket__user-avater img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.ticket__user-avater p {
+  font-weight: bold;
+}
+.ticket__content h2 {
+  font-size: 1.8rem;
+}
+.ticket__cta-btn a {
+  text-decoration: none;
+  color: var(--txt-white-color);
+  background-color: var(--color-primary);
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+.ticket__cta-btn {
+  align-self: flex-end;
+}
+@media screen and (min-width: 768px) {
+  .tickets {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tickets {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
